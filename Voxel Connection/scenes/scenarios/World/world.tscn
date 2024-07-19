@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhvv1pn75a1nj"]
+[gd_scene load_steps=5 format=3 uid="uid://dhvv1pn75a1nj"]
 
 [ext_resource type="Script" path="res://scenes/scenarios/World/world.gd" id="1_e725y"]
 [ext_resource type="PackedScene" uid="uid://c5kxvxmxmodg7" path="res://scenes/blocks/block/block.tscn" id="2_wtkp4"]
 [ext_resource type="PackedScene" uid="uid://bb6amol8nktml" path="res://scenes/actors/girlfriend/girlfriend.tscn" id="3_a6113"]
+[ext_resource type="PackedScene" uid="uid://dybh5ju60y1wo" path="res://scenes/actors/player/player.tscn" id="4_ufye7"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_e725y")
@@ -26,3 +27,6 @@ position = Vector2(-388, -222)
 
 [node name="Girlfriend" parent="." instance=ExtResource("3_a6113")]
 position = Vector2(15, -435)
+
+[node name="Player" parent="." instance=ExtResource("4_ufye7")]
+position = Vector2(12, -821)
