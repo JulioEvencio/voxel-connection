@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dybh5ju60y1wo"]
+[gd_scene load_steps=8 format=3 uid="uid://dybh5ju60y1wo"]
 
 [ext_resource type="Script" path="res://scenes/actors/player/player.gd" id="1_0ulve"]
 [ext_resource type="Texture2D" uid="uid://b4jdda770myj8" path="res://assets/2D/characters/player_male/male_leg.png" id="2_fldj0"]
+[ext_resource type="Texture2D" uid="uid://clilpx8wgvgkx" path="res://assets/2D/UI/input_outline_square.png" id="2_iamhx"]
 [ext_resource type="Texture2D" uid="uid://dqbvbyyup86td" path="res://assets/2D/characters/player_male/male_body.png" id="3_s54vo"]
 [ext_resource type="Texture2D" uid="uid://da1adf8cb4oml" path="res://assets/2D/characters/player_male/male_arm.png" id="4_24x1h"]
 [ext_resource type="Texture2D" uid="uid://dhsswppi5n8hr" path="res://assets/2D/characters/player_male/male_head.png" id="5_wq2jv"]
@@ -12,6 +13,135 @@ size = Vector2(28, 176)
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_0ulve")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="HBoxContainer" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -160.0
+offset_right = 740.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="Slot 01" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 01"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot 02" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 02"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot 03" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 03"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot 04" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 04"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot 05" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 05"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot 06" type="TextureRect" parent="HUD/Inventory"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_iamhx")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Inventory/Slot 06"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
