@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb6amol8nktml"]
+
+[ext_resource type="Texture2D" uid="uid://d4ign2iba03mh" path="res://assets/2D/characters/player_female/female_leg.png" id="1_lf43p"]
+[ext_resource type="Script" path="res://scenes/actors/girlfriend/girlfriend.gd" id="1_qnxu8"]
+[ext_resource type="Texture2D" uid="uid://pt3m602xaq03" path="res://assets/2D/characters/player_female/female_body.png" id="2_d157b"]
+[ext_resource type="Texture2D" uid="uid://c56ojnsno0c6" path="res://assets/2D/characters/player_female/female_arm.png" id="3_smb5o"]
+[ext_resource type="Texture2D" uid="uid://f4f1rqof6kep" path="res://assets/2D/characters/player_female/female_head.png" id="4_rd0sm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l40gn"]
+size = Vector2(64, 178)
+
+[node name="Girlfriend" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_qnxu8")
+
+[node name="Leg" type="Sprite2D" parent="."]
+position = Vector2(0, -28)
+texture = ExtResource("1_lf43p")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(0, -85)
+texture = ExtResource("2_d157b")
+
+[node name="Arm" type="Sprite2D" parent="."]
+position = Vector2(8, -81)
+texture = ExtResource("3_smb5o")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(6, -142)
+texture = ExtResource("4_rd0sm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -89)
+shape = SubResource("RectangleShape2D_l40gn")
