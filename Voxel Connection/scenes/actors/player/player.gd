@@ -6,8 +6,20 @@ const JUMP_VELOCITY : float = -400.0
 
 var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var slots : Array
+var inventory : Array = []
+
+var item_current : int = 0
+
+func _ready() -> void:
+	slots = get_tree().get_nodes_in_group("slots")
+	
+	for i in slots.size():
+		slots[i].modulate = Color.DARK_SLATE_GRAY
+
 func _physics_process(delta : float) -> void:
 	move(delta)
+	update_item_current()
 
 func move(delta : float) -> void:
 	if not is_on_floor():
@@ -24,3 +36,24 @@ func move(delta : float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	move_and_slide()
+
+func update_item_current() -> void:
+	slots[item_current].modulate = Color.DARK_SLATE_GRAY
+	
+	if Input.is_action_just_pressed("mouse_wheel_up"):
+		item_current += 1
+	if Input.is_action_just_pressed("mouse_wheel_down"):
+		item_current -= 1
+	
+	if item_current >= 6:
+		item_current = 0
+	if item_current <= -1:
+		item_current = 5
+	
+	slots[item_current].modulate = Color.WHITE
+
+func _on_area_2d_body_entered(body : Node2D) -> void:
+	if body is Item:
+		slots[inventory.size()].get_node("TextureRect").set_texture(load(body.get_node("Sprite2D").texture.resource_path))
+		inventory.push_back(body.item_name)
+		body.queue_free()

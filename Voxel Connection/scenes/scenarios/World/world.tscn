@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhvv1pn75a1nj"]
+[gd_scene load_steps=6 format=3 uid="uid://dhvv1pn75a1nj"]
 
 [ext_resource type="Script" path="res://scenes/scenarios/World/world.gd" id="1_e725y"]
+[ext_resource type="PackedScene" uid="uid://bxiy2pjd5a40d" path="res://scenes/items/axe/axe.tscn" id="3_2c0cj"]
+[ext_resource type="PackedScene" uid="uid://cwxpxemqx8plx" path="res://scenes/items/pick/pick.tscn" id="4_exb3q"]
 [ext_resource type="PackedScene" uid="uid://dybh5ju60y1wo" path="res://scenes/actors/player/player.tscn" id="4_ufye7"]
+[ext_resource type="PackedScene" uid="uid://djwyv4xvssih8" path="res://scenes/items/shovel/shovel.tscn" id="5_4an1g"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_e725y")
 
 [node name="Player" parent="." instance=ExtResource("4_ufye7")]
 position = Vector2(51, -195)
+
+[node name="Axe" parent="." instance=ExtResource("3_2c0cj")]
+position = Vector2(371, -140)
+
+[node name="Shovel" parent="." instance=ExtResource("5_4an1g")]
+position = Vector2(816, -145)
+
+[node name="Pick" parent="." instance=ExtResource("4_exb3q")]
+position = Vector2(597, -146)

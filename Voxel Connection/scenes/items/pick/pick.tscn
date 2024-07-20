@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwxpxemqx8plx"]
+
+[ext_resource type="PackedScene" uid="uid://dajgim524ybb7" path="res://scenes/items/item_base/item.tscn" id="1_t8vad"]
+[ext_resource type="Texture2D" uid="uid://ciokbkjm7oyiy" path="res://assets/2D/items/pick_diamond.png" id="2_su0wa"]
+
+[node name="Pick" instance=ExtResource("1_t8vad")]
+item_name = "Pick"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_su0wa")

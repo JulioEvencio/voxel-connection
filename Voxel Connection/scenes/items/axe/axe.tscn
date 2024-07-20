@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxiy2pjd5a40d"]
+
+[ext_resource type="PackedScene" uid="uid://dajgim524ybb7" path="res://scenes/items/item_base/item.tscn" id="1_rgbhr"]
+[ext_resource type="Texture2D" uid="uid://cnif385jlav5y" path="res://assets/2D/items/axe_diamond.png" id="2_x6aul"]
+
+[node name="Axe" instance=ExtResource("1_rgbhr")]
+item_name = "Axe"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_x6aul")
