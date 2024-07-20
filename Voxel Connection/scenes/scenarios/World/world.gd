@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var block_scene : PackedScene = preload("res://scenes/blocks/block/block.tscn")
+@onready var block_scene : PackedScene = preload("res://scenes/blocks/block_base/block.tscn")
 
-func _ready() -> void:
+func aasdready() -> void:
 	for i in range(10):
 		var block : Block = block_scene.instantiate()
 		

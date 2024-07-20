@@ -1,22 +1,42 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhvv1pn75a1nj"]
+[gd_scene load_steps=7 format=3 uid="uid://dhvv1pn75a1nj"]
 
 [ext_resource type="Script" path="res://scenes/scenarios/World/world.gd" id="1_e725y"]
 [ext_resource type="PackedScene" uid="uid://bxiy2pjd5a40d" path="res://scenes/items/axe/axe.tscn" id="3_2c0cj"]
 [ext_resource type="PackedScene" uid="uid://cwxpxemqx8plx" path="res://scenes/items/pick/pick.tscn" id="4_exb3q"]
 [ext_resource type="PackedScene" uid="uid://dybh5ju60y1wo" path="res://scenes/actors/player/player.tscn" id="4_ufye7"]
 [ext_resource type="PackedScene" uid="uid://djwyv4xvssih8" path="res://scenes/items/shovel/shovel.tscn" id="5_4an1g"]
+[ext_resource type="PackedScene" uid="uid://d0m0ioryj0l3g" path="res://scenes/blocks/dirt/dirt.tscn" id="6_bvxd6"]
 
 [node name="World" type="Node2D"]
+position = Vector2(129, 78)
 script = ExtResource("1_e725y")
+
+[node name="Axe" parent="." instance=ExtResource("3_2c0cj")]
+position = Vector2(225, -151)
+
+[node name="Shovel" parent="." instance=ExtResource("5_4an1g")]
+position = Vector2(564, -166)
+
+[node name="Pick" parent="." instance=ExtResource("4_exb3q")]
+position = Vector2(396, -159)
 
 [node name="Player" parent="." instance=ExtResource("4_ufye7")]
 position = Vector2(51, -195)
 
-[node name="Axe" parent="." instance=ExtResource("3_2c0cj")]
-position = Vector2(371, -140)
+[node name="Dirt" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(0, -8)
 
-[node name="Shovel" parent="." instance=ExtResource("5_4an1g")]
-position = Vector2(816, -145)
+[node name="Dirt2" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(714, 8)
 
-[node name="Pick" parent="." instance=ExtResource("4_exb3q")]
-position = Vector2(597, -146)
+[node name="Dirt3" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(574, -4)
+
+[node name="Dirt4" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(428, -2)
+
+[node name="Dirt5" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(282, -4)
+
+[node name="Dirt6" parent="." instance=ExtResource("6_bvxd6")]
+position = Vector2(138, 0)

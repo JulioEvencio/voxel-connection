@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0m0ioryj0l3g"]
+
+[ext_resource type="PackedScene" uid="uid://c5kxvxmxmodg7" path="res://scenes/blocks/block_base/block.tscn" id="1_pb7qx"]
+[ext_resource type="Texture2D" uid="uid://bssdj46gssshh" path="res://assets/2D/tiles/dirt.png" id="2_w3r5c"]
+
+[node name="Dirt" instance=ExtResource("1_pb7qx")]
+block_type = "Shovel"
+can_put_block = false
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_w3r5c")
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = false
