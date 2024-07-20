@@ -15,6 +15,10 @@ run/main_scene="res://scenes/scenarios/World/world.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Singleton="*res://scenes/singletons/singleton.tscn"
+
 [display]
 
 window/size/viewport_width=1280

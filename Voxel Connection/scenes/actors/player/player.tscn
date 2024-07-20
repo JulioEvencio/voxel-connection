@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dybh5ju60y1wo"]
+[gd_scene load_steps=9 format=3 uid="uid://dybh5ju60y1wo"]
 
 [ext_resource type="Script" path="res://scenes/actors/player/player.gd" id="1_0ulve"]
 [ext_resource type="Texture2D" uid="uid://b4jdda770myj8" path="res://assets/2D/characters/player_male/male_leg.png" id="2_fldj0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqbvbyyup86td" path="res://assets/2D/characters/player_male/male_body.png" id="3_s54vo"]
 [ext_resource type="Texture2D" uid="uid://da1adf8cb4oml" path="res://assets/2D/characters/player_male/male_arm.png" id="4_24x1h"]
 [ext_resource type="Texture2D" uid="uid://dhsswppi5n8hr" path="res://assets/2D/characters/player_male/male_head.png" id="5_wq2jv"]
+[ext_resource type="AudioStream" uid="uid://cuhqaltvb82vl" path="res://assets/audios/items/drop_002.ogg" id="7_58x8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cakb"]
 size = Vector2(28, 176)
@@ -144,6 +145,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 
 [node name="Sprites" type="Node2D" parent="."]
 
@@ -172,5 +174,8 @@ collision_mask = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_2cakb")
+
+[node name="ItemAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_58x8d")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

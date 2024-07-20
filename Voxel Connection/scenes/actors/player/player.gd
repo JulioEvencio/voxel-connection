@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var item_audio : AudioStreamPlayer = get_node("ItemAudio")
+
 const SPEED : float = 300.0
 const JUMP_VELOCITY : float = -400.0
 
@@ -64,3 +66,4 @@ func _on_area_2d_body_entered(body : PhysicsBody2D) -> void:
 		slots[inventory.size()].get_node("TextureRect").set_texture(load(body.get_node("Sprite2D").texture.resource_path))
 		inventory.push_back([body.item_name, body.get_node("Sprite2D").texture.resource_path, false, true])
 		body.queue_free()
+		item_audio.play()

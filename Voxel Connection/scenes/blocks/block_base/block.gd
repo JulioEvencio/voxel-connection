@@ -6,6 +6,8 @@ class_name Block
 
 @onready var texture_rect : TextureRect = get_node("TextureRect")
 @onready var collision_shape_2D : CollisionShape2D = get_node("CollisionShape2D")
+@onready var put_audio : AudioStreamPlayer = get_node("PutAudio")
+@onready var remove_audio : AudioStreamPlayer = get_node("RemoveAudio")
 
 var player : Player
 
@@ -21,6 +23,7 @@ func _physics_process(_delta : float) -> void:
 
 func put_block() -> void:
 	if can_put_block and player.item_current < player.inventory.size() and player.inventory[player.item_current][2]:
+		put_audio.play()
 		block_type = player.inventory[player.item_current][0]
 		texture_rect.texture = load(player.inventory[player.item_current][1])
 		collision_shape_2D.disabled = false
@@ -28,6 +31,7 @@ func put_block() -> void:
 
 func remove_block() -> void:
 	if player.item_current < player.inventory.size() and block_type == player.inventory[player.item_current][0] and player.inventory[player.item_current][3]:
+		remove_audio.play()
 		player.add_block_to_inventory(self)
 		block_type = "Sky"
 		texture_rect.texture = load("res://assets/2D/other/skybox_top.png")
