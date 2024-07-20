@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://danhwugih2jp2"]
+
+[ext_resource type="PackedScene" uid="uid://c5kxvxmxmodg7" path="res://scenes/blocks/block_base/block.tscn" id="1_lveh8"]
+[ext_resource type="Texture2D" uid="uid://wfnqyu1j0058" path="res://assets/2D/tiles/stone.png" id="2_ahpcx"]
+
+[node name="Stone" instance=ExtResource("1_lveh8")]
+block_type = "Pick"
+can_put_block = false
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_ahpcx")
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = false

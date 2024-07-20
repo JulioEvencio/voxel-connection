@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sd7eomnfg4cr"]
+
+[ext_resource type="PackedScene" uid="uid://c5kxvxmxmodg7" path="res://scenes/blocks/block_base/block.tscn" id="1_er81j"]
+[ext_resource type="Texture2D" uid="uid://cfpas5n5cacqj" path="res://assets/2D/tiles/wood.png" id="2_p47i2"]
+
+[node name="Wood" instance=ExtResource("1_er81j")]
+block_type = "Axe"
+can_put_block = false
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_p47i2")
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = false

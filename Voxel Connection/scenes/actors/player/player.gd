@@ -55,12 +55,12 @@ func update_item_current() -> void:
 	slots[item_current].modulate = Color.WHITE
 
 func add_block_to_inventory(block : Block) -> void:
-	if not inventory.has([block.block_type, block.get_node("TextureRect").texture.resource_path, true]):
+	if not inventory.has([block.block_type, block.get_node("TextureRect").texture.resource_path, true, false]):
 		slots[inventory.size()].get_node("TextureRect").set_texture(load(block.get_node("TextureRect").texture.resource_path))
-		inventory.push_back([block.block_type, block.get_node("TextureRect").texture.resource_path, true])
+		inventory.push_back([block.block_type, block.get_node("TextureRect").texture.resource_path, true, false])
 
 func _on_area_2d_body_entered(body : PhysicsBody2D) -> void:
 	if body is Item:
 		slots[inventory.size()].get_node("TextureRect").set_texture(load(body.get_node("Sprite2D").texture.resource_path))
-		inventory.push_back([body.item_name, body.get_node("Sprite2D").texture.resource_path, false])
+		inventory.push_back([body.item_name, body.get_node("Sprite2D").texture.resource_path, false, true])
 		body.queue_free()

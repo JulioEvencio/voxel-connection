@@ -27,7 +27,7 @@ func put_block() -> void:
 		can_put_block = false
 
 func remove_block() -> void:
-	if player.item_current < player.inventory.size() and block_type == player.inventory[player.item_current][0]:
+	if player.item_current < player.inventory.size() and block_type == player.inventory[player.item_current][0] and player.inventory[player.item_current][3]:
 		player.add_block_to_inventory(self)
 		block_type = "Sky"
 		texture_rect.texture = load("res://assets/2D/other/skybox_top.png")

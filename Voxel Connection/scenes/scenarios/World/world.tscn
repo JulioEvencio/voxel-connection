@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhvv1pn75a1nj"]
+[gd_scene load_steps=9 format=3 uid="uid://dhvv1pn75a1nj"]
 
 [ext_resource type="Script" path="res://scenes/scenarios/World/world.gd" id="1_e725y"]
 [ext_resource type="PackedScene" uid="uid://bxiy2pjd5a40d" path="res://scenes/items/axe/axe.tscn" id="3_2c0cj"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dybh5ju60y1wo" path="res://scenes/actors/player/player.tscn" id="4_ufye7"]
 [ext_resource type="PackedScene" uid="uid://djwyv4xvssih8" path="res://scenes/items/shovel/shovel.tscn" id="5_4an1g"]
 [ext_resource type="PackedScene" uid="uid://d0m0ioryj0l3g" path="res://scenes/blocks/dirt/dirt.tscn" id="6_bvxd6"]
+[ext_resource type="PackedScene" uid="uid://danhwugih2jp2" path="res://scenes/blocks/stone/stone.tscn" id="7_e5egt"]
+[ext_resource type="PackedScene" uid="uid://sd7eomnfg4cr" path="res://scenes/blocks/wood/wood.tscn" id="8_ps6oy"]
 
 [node name="World" type="Node2D"]
 position = Vector2(129, 78)
@@ -35,8 +37,8 @@ position = Vector2(574, -4)
 [node name="Dirt4" parent="." instance=ExtResource("6_bvxd6")]
 position = Vector2(428, -2)
 
-[node name="Dirt5" parent="." instance=ExtResource("6_bvxd6")]
-position = Vector2(282, -4)
+[node name="Stone" parent="." instance=ExtResource("7_e5egt")]
+position = Vector2(147, -4)
 
-[node name="Dirt6" parent="." instance=ExtResource("6_bvxd6")]
-position = Vector2(138, 0)
+[node name="Wood" parent="." instance=ExtResource("8_ps6oy")]
+position = Vector2(286, -6)
