@@ -4,7 +4,7 @@ class_name Player
 @onready var item_audio : AudioStreamPlayer = get_node("ItemAudio")
 
 const SPEED : float = 300.0
-const JUMP_VELOCITY : float = -400.0
+const JUMP_VELOCITY : float = -600.0
 
 var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
