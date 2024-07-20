@@ -22,9 +22,6 @@ position = Vector2(564, -166)
 [node name="Pick" parent="." instance=ExtResource("4_exb3q")]
 position = Vector2(396, -159)
 
-[node name="Player" parent="." instance=ExtResource("4_ufye7")]
-position = Vector2(51, -195)
-
 [node name="Dirt" parent="." instance=ExtResource("6_bvxd6")]
 position = Vector2(0, -8)
 
@@ -42,3 +39,6 @@ position = Vector2(147, -4)
 
 [node name="Wood" parent="." instance=ExtResource("8_ps6oy")]
 position = Vector2(286, -6)
+
+[node name="Player" parent="." instance=ExtResource("4_ufye7")]
+position = Vector2(51, -195)
