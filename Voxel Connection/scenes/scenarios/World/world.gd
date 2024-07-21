@@ -28,14 +28,14 @@ func _ready() -> void:
 func _physics_process(_delta : float) -> void:
 	if Input.is_action_just_pressed("restart"):
 		Transition.start(func(): restart())
-	if Input.is_action_just_pressed("escape"):
-		call_deferred("quit")
+	if Input.is_action_just_pressed("enter"):
+		Transition.start(func(): menu())
 
 func restart() -> void:
 	get_tree().reload_current_scene()
 
-func quit() -> void:
-	get_tree().quit()
+func menu() -> void:
+	get_tree().change_scene_to_file("res://scenes/screens/menu/menu.tscn")
 
 func build_world() -> void:
 	for i in map.size():

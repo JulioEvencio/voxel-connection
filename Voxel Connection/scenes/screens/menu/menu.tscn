@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvqyu5jeggeem"]
+
+[ext_resource type="Script" path="res://scenes/screens/menu/menu.gd" id="1_2m53d"]
+[ext_resource type="FontFile" uid="uid://balvlka5e08tp" path="res://assets/fonts/Kenney Blocks.ttf" id="1_umg1p"]
+[ext_resource type="Theme" uid="uid://cat4qig52nx4q" path="res://library/button/button.tres" id="2_c3mo7"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2m53d")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_umg1p")
+theme_override_font_sizes/font_size = 100
+text = "Voxel
+Connection"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("2_c3mo7")
+text = "Play"
+
+[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("2_c3mo7")
+text = "Credits"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -76.0
+offset_right = 260.0
+offset_bottom = -30.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_umg1p")
+theme_override_font_sizes/font_size = 30
+text = "Version 0.1"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
