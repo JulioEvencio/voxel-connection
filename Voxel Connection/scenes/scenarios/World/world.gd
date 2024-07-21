@@ -99,5 +99,4 @@ func build_world() -> void:
 
 func _on_player_next_level() -> void:
 	Singleton.level_current += 1
-	
 	Transition.start(func(): restart())
