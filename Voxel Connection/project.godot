@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Voxel Connection"
+config/version="0.1"
 run/main_scene="res://scenes/screens/menu/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.png"
@@ -27,6 +28,7 @@ window/size/viewport_height=720
 window/size/mode=3
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/2D/UI/pointer_scifi_b.png"
+mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 [filesystem]
 
