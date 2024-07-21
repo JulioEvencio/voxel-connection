@@ -27,7 +27,7 @@ func _ready() -> void:
 
 func _physics_process(_delta : float) -> void:
 	if Input.is_action_just_pressed("restart"):
-		call_deferred("restart")
+		Transition.start(func(): restart())
 	if Input.is_action_just_pressed("escape"):
 		call_deferred("quit")
 
@@ -100,4 +100,4 @@ func build_world() -> void:
 func _on_player_next_level() -> void:
 	Singleton.level_current += 1
 	
-	call_deferred("restart")
+	Transition.start(func(): restart())

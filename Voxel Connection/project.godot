@@ -13,11 +13,12 @@ config_version=5
 config/name="Voxel Connection"
 run/main_scene="res://scenes/scenarios/World/world.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
 Singleton="*res://scenes/singletons/singleton.tscn"
+Transition="*res://scenes/transitions/transition/transition.tscn"
 
 [display]
 
