@@ -6,7 +6,7 @@ func start() -> void:
 	get_tree().change_scene_to_file("res://scenes/scenarios/World/world.tscn")
 
 func credits() -> void:
-	pass
+	get_tree().change_scene_to_file("res://scenes/screens/credits/credits.tscn")
 
 func _on_play_pressed() -> void:
 	Transition.start(func(): start())
