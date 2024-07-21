@@ -6,6 +6,10 @@ Voxel Connection is a game made for [Kenney Jam 2024](https://itch.io/jam/kenney
 
 A puzzle game where the objective is to make a connection bridge to your girlfriend
 
+## Assets
+
+This project uses Kenney [Kenney](https://www.kenney.nl/) assets
+
 ## Links
 
 Click [here](https://julio-igreja.itch.io/voxel-connection) to play the game
