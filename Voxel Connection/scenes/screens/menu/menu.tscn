@@ -68,7 +68,7 @@ offset_bottom = -30.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_umg1p")
 theme_override_font_sizes/font_size = 30
-text = "Version 0.1"
+text = "Version 1.0"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
