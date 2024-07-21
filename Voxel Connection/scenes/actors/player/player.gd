@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+signal next_level
+
 @onready var item_audio : AudioStreamPlayer = get_node("ItemAudio")
 
 const SPEED : float = 300.0
@@ -67,3 +69,5 @@ func _on_area_2d_body_entered(body : PhysicsBody2D) -> void:
 		inventory.push_back([body.item_name, body.get_node("Sprite2D").texture.resource_path, false, true])
 		body.queue_free()
 		item_audio.play()
+	elif body is Girlfriend:
+		next_level.emit()

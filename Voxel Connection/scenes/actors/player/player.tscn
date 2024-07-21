@@ -152,18 +152,22 @@ zoom = Vector2(0.5, 0.5)
 [node name="Leg" type="Sprite2D" parent="Sprites"]
 position = Vector2(0, 60)
 texture = ExtResource("2_fldj0")
+flip_h = true
 
 [node name="Body" type="Sprite2D" parent="Sprites"]
 position = Vector2(0, 3)
 texture = ExtResource("3_s54vo")
+flip_h = true
 
 [node name="Arm" type="Sprite2D" parent="Sprites"]
 position = Vector2(8, 7)
 texture = ExtResource("4_24x1h")
+flip_h = true
 
 [node name="Head" type="Sprite2D" parent="Sprites"]
 position = Vector2(-1, -56)
 texture = ExtResource("5_wq2jv")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2cakb")
