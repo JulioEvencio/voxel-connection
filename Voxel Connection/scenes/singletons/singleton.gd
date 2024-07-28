@@ -3,7 +3,7 @@ extends Node
 var level_current : int = 1
 
 var levels_texts : Dictionary = {
-	1: "Your girlfriend is on the other side\nBuild a bridge to make a CONNECTION to the other side\nUse A or D or the right and left arrows to walk\nPress the space bar or W or the up arrow to jump\nPress R to restart the level\nCollect the shovel to gather soil blocks\nUse the left mouse button to place blocks\nUse the right mouse button to remove blocks\nScroll the mouse wheel to switch to the current item\n\n\n\n\n\n\n\nPress ENTER to return to the menu",
+	1: "Your girlfriend is on the other side\nBuild a bridge to make a CONNECTION to the other side\nUse A or D or the right and left arrows to walk\nPress the space bar or W or the up arrow to jump\nPress R to restart the level\nCollect the shovel to gather soil blocks\nUse the left mouse button to place blocks\nUse the right mouse button to remove blocks\nScroll the mouse wheel or numbers to switch to the current item\n\n\n\n\n\n\n\nPress ENTER to return to the menu",
 	2: "Each tool can collect or destroy a specific type of material\nPick up the axe to be able to remove the wooden blocks",
 	3: "There is a stone wall hindering the connection\nGrab the pickaxe and solve this!",
 	4: "",

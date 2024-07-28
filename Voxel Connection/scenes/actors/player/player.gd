@@ -12,8 +12,8 @@ var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var slots : Array
 var inventory : Array = []
-
 var item_current : int = 0
+var can_next_level : bool = true
 
 func _ready() -> void:
 	slots = get_tree().get_nodes_in_group("slots")
@@ -86,5 +86,6 @@ func _on_area_2d_body_entered(body : PhysicsBody2D) -> void:
 		inventory.push_back([body.item_name, body.get_node("Sprite2D").texture.resource_path, false, true])
 		body.queue_free()
 		item_audio.play()
-	elif body is Girlfriend:
+	elif body is Girlfriend and can_next_level:
+		can_next_level = false
 		next_level.emit()
