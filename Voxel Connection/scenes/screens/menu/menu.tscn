@@ -56,7 +56,7 @@ layout_mode = 2
 theme = ExtResource("2_c3mo7")
 text = "Exit"
 
-[node name="Label" type="Label" parent="."]
+[node name="Version" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -68,7 +68,7 @@ offset_bottom = -30.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_umg1p")
 theme_override_font_sizes/font_size = 30
-text = "Version 1.0"
+text = "Version 1.1"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
