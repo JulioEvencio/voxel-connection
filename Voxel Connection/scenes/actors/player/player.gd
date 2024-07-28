@@ -44,19 +44,36 @@ func move(delta : float) -> void:
 func update_item_current() -> void:
 	slots[item_current].modulate = Color.DARK_SLATE_GRAY
 	
-	if Input.is_action_just_pressed("mouse_wheel_up"):
-		item_current += 1
-	
-	if Input.is_action_just_pressed("mouse_wheel_down"):
-		item_current -= 1
-	
-	if item_current >= 6:
-		item_current = 0
-	
-	if item_current <= -1:
-		item_current = 5
+	update_item_current_mouse()
+	update_item_current_key()
 	
 	slots[item_current].modulate = Color.WHITE
+
+func update_item_current_mouse() -> void:
+	if Input.is_action_just_pressed("mouse_wheel_up"):
+		item_current += 1
+		
+		if item_current >= 6:
+			item_current = 0
+	elif Input.is_action_just_pressed("mouse_wheel_down"):
+		item_current -= 1
+		
+		if item_current <= -1:
+			item_current = 5
+
+func update_item_current_key() -> void:
+	if Input.is_action_just_pressed("key_1"):
+		item_current = 0
+	elif Input.is_action_just_pressed("key_2"):
+		item_current = 1
+	elif Input.is_action_just_pressed("key_3"):
+		item_current = 2
+	elif Input.is_action_just_pressed("key_4"):
+		item_current = 3
+	elif Input.is_action_just_pressed("key_5"):
+		item_current = 4
+	elif Input.is_action_just_pressed("key_6"):
+		item_current = 5
 
 func add_block_to_inventory(block : Block) -> void:
 	if not inventory.has([block.block_type, block.get_node("TextureRect").texture.resource_path, true, false]):
